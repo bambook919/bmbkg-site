@@ -1,7 +1,10 @@
 {
     "redirects": [
       { "source": "/ru", "destination": "/ru/" },
-      { "source": "/en", "destination": "/en/" }
+      { "source": "/en", "destination": "/en/" },
+      {
+          "source": "/([^ru]|[^en])", "destination": "/en/"
+      }
     ],
     "cleanUrls": true
   }
