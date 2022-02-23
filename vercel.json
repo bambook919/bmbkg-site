@@ -3,10 +3,7 @@
       { "source": "/ru", "destination": "/ru/" },
       { "source": "/en", "destination": "/en/" },
       {
-          "source": "\\/(?!ru)", "destination": "/en/"
-      },
-      {
-        "source": "\\/(?!en)", "destination": "/en/"
+          "source": "\\b\\/([^ru]|[^en])\\b", "destination": "/en/"
       }
     ],
     "cleanUrls": true
