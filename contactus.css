@@ -21,3 +21,10 @@
   background-image: none;
   padding: 0;
 }
+
+.u-footer {
+  background-image: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
