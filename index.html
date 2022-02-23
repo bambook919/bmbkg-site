@@ -8,14 +8,14 @@
 </head>
 <body>
     <script>
-        document.onloadstart = () => {
+        (async () => {
             var lang = navigator.language;
             if(lang == 'ru') document.title = 'Перенаправление...';
             if(lang == 'en') document.title = 'Redirecting...';
             if(lang == 'ru' || lang == 'en') location.assign('./' + lang + '/');
             else if(lang != "ru" && lang != "en") location.assign('./en/');
             return;
-        };
+        })();
     </script>
 </body>
 </html>
