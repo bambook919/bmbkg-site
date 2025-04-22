@@ -30,6 +30,12 @@
   -webkit-background-clip: padding-box;
   background-clip: padding-box; }
 
+  .u-body {
+    color: #ffffff;
+    background-color: #111112;
+    --effect-scale: 1.1;
+}
+
 .fr-view img.fr-shadow, .fr-view .fr-img-caption.fr-shadow img {
   -webkit-box-shadow: 10px 10px 5px 0px #cccccc;
   -moz-box-shadow: 10px 10px 5px 0px #cccccc;

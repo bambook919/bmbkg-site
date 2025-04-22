@@ -19243,6 +19243,13 @@ a.pswp__share--download:hover {
   text-decoration: none;
   outline: 0;
 }
+
+.u-body {
+  color: #ffffff;
+  background-color: #111112;
+  --effect-scale: 1.1;
+}
+
 .u-gallery-nav-prev,
 .u-carousel-control-prev {
   left: 0;
