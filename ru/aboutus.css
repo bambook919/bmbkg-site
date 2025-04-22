@@ -139,3 +139,9 @@
     margin-right: 30px;
   }
 }
+
+.u-body {
+  color: #ffffff;
+  background-color: #111112;
+  --effect-scale: 1.1;
+}
