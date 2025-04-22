@@ -2015,10 +2015,14 @@ body,
 aside,
 .u-sidebar-block,
 section,
-header,
-footer {
+header {
   position: relative;
 }
+
+footer {
+  display: none;
+}
+
 section > *,
 header > *,
 footer > *,
@@ -26849,12 +26853,12 @@ a.u-link.u-hover-grey-80:hover {
 .u-container-layout.u-container-layout.u-grey-90:before,
 .u-table-alt-grey-90 tr:nth-child(even) {
   color: #ffffff;
-  background-color: #1a1a1a;
+  background-color: #f5f5f5;
 }
 .u-button-style.u-grey-90,
 .u-button-style.u-grey-90[class*="u-border-"] {
   color: #ffffff !important;
-  background-color: #1a1a1a !important;
+  background-color: #f5f5f5 !important;
 }
 .u-button-style.u-grey-90:hover,
 .u-button-style.u-grey-90[class*="u-border-"]:hover,
@@ -26890,10 +26894,10 @@ a.u-button-style.u-button-style.active > .u-active-grey-90[class*="u-border-"],
 li.active > a.u-button-style.u-button-style.u-active-grey-90,
 li.active > a.u-button-style.u-button-style.u-active-grey-90[class*="u-border-"] {
   color: #ffffff !important;
-  background-color: #1a1a1a !important;
+  background-color: #f5f5f5 !important;
 }
 a.u-link.u-hover-grey-90:hover {
-  color: #1a1a1a !important;
+  color: #f5f5f5 !important;
 }
 .u-border-color-1-dark-3,
 .u-separator-color-1-dark-3:after {
@@ -30502,12 +30506,12 @@ li.active > a.u-button-style.u-button-style.u-border-active-grey-80 {
 }
 .u-border-grey-90,
 .u-separator-grey-90:after {
-  border-color: #1a1a1a;
-  stroke: #1a1a1a;
+  border-color: #f5f5f5;
+  stroke: #f5f5f5;
 }
 .u-button-style.u-border-grey-90 {
-  border-color: #1a1a1a !important;
-  color: #1a1a1a !important;
+  border-color: #f5f5f5 !important;
+  color: #f5f5f5 !important;
   background-color: transparent !important;
 }
 .u-button-style.u-border-grey-90:hover,
@@ -30526,11 +30530,11 @@ a.u-button-style.u-button-style.u-border-active-grey-90:active,
 a.u-button-style.u-button-style.u-border-active-grey-90.active,
 a.u-button-style.u-button-style.active > .u-border-active-grey-90,
 li.active > a.u-button-style.u-button-style.u-border-active-grey-90 {
-  color: #1a1a1a !important;
-  border-color: #1a1a1a !important;
+  color: #f5f5f5 !important;
+  border-color: #f5f5f5 !important;
 }
 .u-link.u-border-grey-90[class*="u-border-"] {
-  border-color: #1a1a1a !important;
+  border-color: #f5f5f5 !important;
 }
 .u-link.u-border-grey-90[class*="u-border-"]:hover {
   border-color: #171717 !important;
@@ -35896,7 +35900,7 @@ li.active > a.u-button-style.u-text-grey-90,
 li.active > a.u-button-style.u-text-grey-90[class*="u-border-"],
 a.u-button-style.u-text-grey-90,
 a.u-button-style.u-text-grey-90[class*="u-border-"] {
-  color: #1a1a1a !important;
+  color: #f5f5f5 !important;
 }
 a.u-button-style.u-text-grey-90:hover,
 a.u-button-style.u-text-grey-90[class*="u-border-"]:hover,
@@ -35928,20 +35932,20 @@ a.u-button-style.u-button-style.active > .u-text-active-grey-90[class*="u-border
 :not(.level-2) > .u-nav > .u-nav-item > a.u-nav-link.u-nav-link.u-text-active-grey-90.active,
 .u-popupmenu-items.u-text-hover-grey-90 .u-nav-link:hover,
 .u-popupmenu-items.u-popupmenu-items.u-text-active-grey-90 .u-nav-link.active {
-  color: #1a1a1a !important;
+  color: #f5f5f5 !important;
 }
 .u-text-grey-90 .u-svg-link,
 .u-text-hover-grey-90:hover .u-svg-link,
 .u-button-style:hover > .u-text-hover-grey-90 .u-svg-link,
 .u-button-style.u-button-style.active > .u-text-active-grey-90 .u-svg-link,
 .u-text-hover-grey-90:focus .u-svg-link {
-  fill: #1a1a1a;
+  fill: #f5f5f5;
 }
 .u-link.u-text-grey-90:hover {
   color: #171717 !important;
 }
 a.u-link.u-text-hover-grey-90:hover {
-  color: #1a1a1a !important;
+  color: #f5f5f5 !important;
 }
 /*end-variables colors*/
 
@@ -35955,7 +35959,7 @@ a.u-link.u-text-hover-grey-90:hover {
         .u-table-alt-custom-color-1 tr:nth-child(even)
         {
             color: #ffffff;
-            background-color: #cf2e60;
+            background-color: rgb(10, 10, 10);
         }
 
         .u-button-style.u-custom-color-1,
@@ -36499,7 +36503,8 @@ a.u-link.u-text-hover-grey-90:hover {
 
 /*end-variables sitestylecss*/
  .u-header {
-  background-image: none;
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(30, 30, 30));
+  color: rgb(250, 250, 250);
 }
 
 .u-header .u-sheet-1 {

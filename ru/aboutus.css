@@ -37,7 +37,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-image: linear-gradient(to right, #db545a, #cf2e60);
+  background-image: linear-gradient(to bottom, black, rgb(22, 22, 22));
   margin: 30px 366px 60px auto;
   padding: 10px 24px;
 }
