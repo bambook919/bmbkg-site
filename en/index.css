@@ -122,3 +122,9 @@
   font-weight: 400;
   src: url("./fonts/11548.ttf");
 }
+
+.u-body {
+  color: #ffffff;
+  background-color: #111112;
+  --effect-scale: 1.1;
+}

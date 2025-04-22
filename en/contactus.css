@@ -28,3 +28,9 @@
   bottom: 0;
   width: 100%;
 }
+
+.u-body {
+  color: #ffffff;
+  background-color: #111112;
+  --effect-scale: 1.1;
+}
