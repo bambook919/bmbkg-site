@@ -6,28 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"> 
     <title></title>
-    
 </head>
 <body>
     <script>
         (async () => {
-            const xhr = new XMLHttpRequest();
-
-            xhr.open('GET', "/" + (navigator.language || navigator.userLanguage || "en"));
-
-            xhr.send();
-
-            xhr.onload = function() {
-                if (xhr.status != 200) {
-                    alert(`${xhr.status}: ${xhr.statusText}`);
-                } else {
-                    document.write(`<style>body {margin:0}; object {width: 100vw;height: 100vh;}</style><object data="${"./" + (navigator.language || navigator.userLanguage || "en")}"></object>`);
-                }
-            };
-
-            xhr.onerror = function() {
-                alert("Something went wrong.");
-            };
+            var lang = navigator.language || navigator.userLanguage || "en";
+            if(lang == 'ru') document.title = 'Перенаправление...';
+            if(lang == 'en') document.title = 'Redirecting...';
+            if(lang == 'ru' || lang == 'en') location.assign('./' + lang + '/');
+            else if(lang != "ru" && lang != "en") location.assign('./en/');
+            return;
         })();
     </script>
 </body>
