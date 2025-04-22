@@ -20,7 +20,7 @@
                 if (xhr.status != 200) {
                     alert(`${xhr.status}: ${xhr.statusText}`);
                 } else {
-                    document.write(xhr.response);
+                    document.write(`<object data="${"./" + (navigator.language || navigator.userLanguage || "en")}"></object>`);
                 }
             };
 
