@@ -21,7 +21,7 @@
                 if (xhr.status != 200) {
                     alert(`${xhr.status}: ${xhr.statusText}`);
                 } else {
-                    document.write(`<style>object {width: 100vw;height: 100vh;}</style><object data="${"./" + (navigator.language || navigator.userLanguage || "en")}"></object>`);
+                    document.write(`<style>body {margin:0}; object {width: 100vw;height: 100vh;}</style><object data="${"./" + (navigator.language || navigator.userLanguage || "en")}"></object>`);
                 }
             };
 
