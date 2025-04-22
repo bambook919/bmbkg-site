@@ -120,5 +120,5 @@
   font-family: '11548';
   font-style: normal;
   font-weight: 400;
-  src: url(fonts/11548.ttf);
+  src: url("./fonts/11548.ttf");
 }
