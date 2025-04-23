@@ -7,7 +7,34 @@ export async function GET(request) {
     const mongo = require('mongoose');
     mongo.connect('mongodb+srv://junytwork:ADMIN1@mnstr.wiubncu.mongodb.net/general?retryWrites=true&w=majority&appName=MNSTR');
 
-    const Player = mongo.model('Player');
+    const Player = mongo.model('Player',
+        new mongo.Schema({
+            id: Number,
+            login: String,
+            password: String,
+            data: Object,
+            enemyData: Object,
+            regDate: Number,
+            ban: Boolean,
+            banTop: Boolean,
+            authDate: Number,
+            apiToken: String,
+            friends: Array,
+            isAdmin: Boolean,
+            tradeCode: String,
+            tradeRequests: Array,
+            tradesComplete: Array,
+            ipAddress: String,
+            dailyQuestUntil: Number,
+            weeklyQuestUntil: Number,
+            banPromo: Boolean,
+            tg: Number,
+            loginDays: Number,
+            nextBonusDate: Number,
+            nickname: String,
+            vkplay: String
+        })
+    );
     const players1 = (await Player.find({ })).filter(x=> Object.keys(x.data || {}).includes('atk'));
     const pt = players1.map(x=> x.data.totalPlaytime || 0).reduce((partialSum, a) => partialSum + a, 0);
     const g = players1.map(x=> x.data.gold || 0).reduce((partialSum, a) => partialSum + a, 0);
