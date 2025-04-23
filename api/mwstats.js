@@ -1,5 +1,5 @@
 const mongo = require('mongoose');
-    mongo.connect('mongodb+srv://junytwork:ADMIN1@mnstr.wiubncu.mongodb.net/general?retryWrites=true&w=majority&appName=MNSTR');
+    mongo.connect('mongodb+srv://junytwork:ADMIN1@mnstr.wiubncu.mongodb.net/general?retryWrites=true&w=majority&appName=MNSTR', { useUnifiedTopology: true, useNewUrlParser: true });
 
     const Player = mongo.model('Player',
         new mongo.Schema({
