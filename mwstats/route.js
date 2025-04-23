@@ -1,9 +1,10 @@
-const mongo = require('mongoose');
-mongo.connect('mongodb+srv://junytwork:ADMIN1@mnstr.wiubncu.mongodb.net/general?retryWrites=true&w=majority&appName=MNSTR');
 
-const Player = mongo.model('Player');
 
 export async function GET(request) {
+    const mongo = require('mongoose');
+    mongo.connect('mongodb+srv://junytwork:ADMIN1@mnstr.wiubncu.mongodb.net/general?retryWrites=true&w=majority&appName=MNSTR');
+
+    const Player = mongo.model('Player');
     const players1 = (await Player.find({ })).filter(x=> Object.keys(x.data || {}).includes('atk'));
     const pt = players1.map(x=> x.data.totalPlaytime || 0).reduce((partialSum, a) => partialSum + a, 0);
     const g = players1.map(x=> x.data.gold || 0).reduce((partialSum, a) => partialSum + a, 0);
