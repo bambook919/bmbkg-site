@@ -1,10 +1,4 @@
-
-
-export async function GET(request) {
-    /*await fetch("http://91.245.227.195:1518/mwstats").then(async res => {
-        return new Response.json(await res.json());
-    }).catch(() => { return new Response.json({ success: false }) });*/
-    const mongo = require('mongoose');
+const mongo = require('mongoose');
     mongo.connect('mongodb+srv://junytwork:ADMIN1@mnstr.wiubncu.mongodb.net/general?retryWrites=true&w=majority&appName=MNSTR');
 
     const Player = mongo.model('Player',
@@ -35,6 +29,12 @@ export async function GET(request) {
             vkplay: String
         })
     );
+
+export async function GET(request) {
+    /*await fetch("http://91.245.227.195:1518/mwstats").then(async res => {
+        return new Response.json(await res.json());
+    }).catch(() => { return new Response.json({ success: false }) });*/
+    
     const players1 = (await Player.find({ })).filter(x=> Object.keys(x.data || {}).includes('atk'));
     const pt = players1.map(x=> x.data.totalPlaytime || 0).reduce((partialSum, a) => partialSum + a, 0);
     const g = players1.map(x=> x.data.gold || 0).reduce((partialSum, a) => partialSum + a, 0);
