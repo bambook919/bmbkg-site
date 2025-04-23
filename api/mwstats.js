@@ -1,9 +1,9 @@
 
 
 export async function GET(request) {
-    await fetch("http://91.245.227.195:1518/mwstats").then(async res => {
+    /*await fetch("http://91.245.227.195:1518/mwstats").then(async res => {
         return new Response.json(await res.json());
-    }).catch(() => { return new Response.json({ success: false }) });/*
+    }).catch(() => { return new Response.json({ success: false }) });*/
     const mongo = require('mongoose');
     mongo.connect('mongodb+srv://junytwork:ADMIN1@mnstr.wiubncu.mongodb.net/general?retryWrites=true&w=majority&appName=MNSTR');
 
@@ -22,5 +22,5 @@ export async function GET(request) {
         ascension: asc || 0,
         overallAtk: Math.ceil(oa) || 0,
         gold: Math.ceil(g) || 0
-    });*/
+    });
 }
