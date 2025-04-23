@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v6.0.1, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v6.0.1, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+  <meta name="description" content="">
+  <script src="https://cdn.ably.com/lib/ably.min-2.js"></script>
+  <script>
+    const utils = {
+        rn: (count) => {
+            count = Math.floor(count);
+            let i = 0 === count ? count : Math.floor(Math.log(count) / Math.log(1000)); 
+            let result = parseFloat((count / Math.pow(1000, i)).toFixed(2)); 
+            if (i > 25) return "Много";
+                 result += "" + ["", "K", "KK", "KKK", "KKKK", "KKKKK", "KKKKKK", "KKKKKKK", "KKKKKKKK", "KKKKKKKKK", "KKKKKKKKKK", "KKKKKKKKKKK", "KKKKKKKKKKKK", "KKKKKKKKKKKKK", "KKKKKKKKKKKKKK", "KKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKKKKKK"][i];
+            return result;
+        },
+        decl: (n, titles) => { return titles[(n % 10 === 1 && n % 100 !== 11) ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 1 : 2] },
+    }
+    function SetStats() {
+      const xhr1 = new XMLHttpRequest();
+      xhr1.open('GET', 'http://91.245.227.195:1518/mwstats', true);
+      xhr1.responseType = 'json';
+      const data = {
+            data: undefined
+      }
+      xhr1.onload = function() {
+        if (xhr1.status == 200) {
+          document.getElementById('serverstatus').innerText = "Статус сервера: работает в штатном режиме...";
+          data.data = (xhr1.response);
+          if(data.data.players && Number.isNaN(data.data.players) == false) document.getElementById('players-count').innerText = (+data.data.players || 0).toLocaleString('ru');
+          if(data.data.playtime && Number.isNaN(data.data.playtime) == false) document.getElementById('playtime-count').innerText = (+data.data.playtime || 0).toLocaleString('ru');
+          if(data.data.kills && Number.isNaN(data.data.kills) == false) document.getElementById('kills-count').innerText = (+data.data.kills || 0).toLocaleString('ru');
+          if(data.data.ascension && Number.isNaN(data.data.ascension) == false) document.getElementById('ascension-count').innerText = (+data.data.ascension || 0).toLocaleString('ru');
+          if(data.data.gold && Number.isNaN(data.data.gold) == false) document.getElementById('gold-count').innerText = utils.rn(+data.data.gold || 0);
+          if(data.data.overallAtk && Number.isNaN(data.data.overallAtk) == false) document.getElementById('overallatk-count').innerText = utils.rn(+data.data.overallAtk || 0);
+        }
+        else if(xhr1.status != 200) document.getElementById('serverstatus').innerHTML = "Статус сервера: наблюдаются проблемы с подключением..." + ("(HTTP "  + xhr1.status.toString() + ")");;
+      };
+      xhr1.send();
+    }
+    SetStats();
+    setInterval(() => {
+      SetStats();
+    }, 3000);
+    
+  </script>
+  <script>
+    
+      // basic auth with an API key
+      //var client = new Ably.Realtime("cCwCqw.sBu_jQ:hAHwDUUdG_w0EAxyMY3TzRf6aQkIKDgTcQlAOav81ME");
+      //var channel = client.channels.get('site');
+      /*channel.subscribe('stats', (data) => {
+          if(data.data.players && Number.isNaN(data.data.players) == false) document.getElementById('players-count').innerText = (+data.data.players || 0).toLocaleString('ru');
+          if(data.data.playtime && Number.isNaN(data.data.playtime) == false) document.getElementById('playtime-count').innerText = (+data.data.playtime || 0).toLocaleString('ru');
+          if(data.data.kills && Number.isNaN(data.data.kills) == false) document.getElementById('kills-count').innerText = (+data.data.kills || 0).toLocaleString('ru');
+          if(data.data.ascension && Number.isNaN(data.data.ascension) == false) document.getElementById('ascension-count').innerText = (+data.data.ascension || 0).toLocaleString('ru');
+          if(data.data.gold && Number.isNaN(data.data.gold) == false) document.getElementById('gold-count').innerText = utils.rn(+data.data.gold || 0);
+          if(data.data.overallAtk && Number.isNaN(data.data.overallAtk) == false) document.getElementById('overallatk-count').innerText = utils.rn(+data.data.overallAtk || 0);
+      });*/
+      
+  </script>
+  
+  
+  <title>MONSTER WAR • BMBK Games</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=gdbjkE"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=gdbjkE" type="text/css">
+
+  <style>
+    .whilebold {
+      font-weight: 700;
+    }
+  </style>
+  
+  
+</head>
+<body>
+  
+  <section data-bs-version="5.1" class="header12 cid-uJbXOoYF2i mbr-parallax-background" id="header12-2">
+  
+  <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(23, 23, 23);"></div>
+
+  <div class="text-center container">
+    <div class="row mb-4 justify-content-center">
+      <div class="col-12 col-md-8">
+        <img class="w-100" src="assets/images/2-keyart25601440.jpg-646x352.jpg">
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-12 content-head">
+        <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2"><strong>MONSTER WAR</strong></h1>
+        <p class="mbr-text mbr-fonts-style mb-4 display-7"><strong id="serverstatus">Статус сервера игры: подключение...</strong><br><br><em>Убивайте монстров, зверей и бандитов, создавайте зелья из потрохов, осваивайте новые умения, комбинируйте своё снаряжение для достижения лучшей эффективности, заглядывайте в Теневой рынок, постигайте бесконечную прогрессию, торгуйте с другими игроками, переписывайтесь во внутриигровом чате и пробуйте широкие возможности этой новой игры!</em></p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="counter1 counters cid-uJc1Hrp4Kc" id="counter1-4">
+	
+
+	
+	
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12 content-head">
+				<div class="card-wrapper mb-5">
+					<div class="card-box align-center">
+						<h4 class="mbr-section-title mbr-fonts-style mb-0 display-2"><div><strong>Статистика игры на данный момент...</strong></div></h4>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row content-row mt-4">
+			<div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb active">
+				<div class="item-wrapper">
+					<div class="title mb-3">
+						<h3 class="mbr-fonts-style display-1 whilebold" id="players-count" style="color: white;">0</h3>
+					</div>
+					<h4 class="card-title mbr-fonts-style display-5">
+						<strong>ИГРОКОВ,</strong></h4>
+					<p class="mbr-text card-text mbr-fonts-style mb-0 display-7">хотя бы раз сыгравших<br>в MONSTER WAR.</p>
+				</div>
+			</div><div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+				<div class="item-wrapper">
+					<div class="title mb-3">
+						<h3 class="mbr-fonts-style display-1 whilebold" id="playtime-count" style="color: white;">0</h3>
+					</div>
+					<h4 class="card-title mbr-fonts-style display-5"><strong>ЧАСОВ</strong></h4>
+					<p class="mbr-text card-text mbr-fonts-style mb-0 display-7">суммарно сыграли в MONSTER WAR все игроки.</p>
+				</div>
+			</div>
+			<div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+				<div class="item-wrapper">
+					<div class="title mb-3">
+						<h3 class="mbr-fonts-style display-1 whilebold" id="kills-count" style="color: white;">
+							0</h3>
+					</div>
+					<h4 class="card-title mbr-fonts-style display-5">
+						<strong>УБИТЫХ ВРАГОВ.</strong></h4>
+					<p class="mbr-text card-text mbr-fonts-style mb-0 display-7">Именно столько бандитов, зверей и монстров было убито игроками<br>MONSTER WAR.</p>
+				</div>
+			</div>
+			<div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+				<div class="item-wrapper">
+					<div class="title mb-3">
+						<h3 class="mbr-fonts-style display-1 whilebold" id="ascension-count" style="color: white;">
+							0</h3>
+					</div>
+					<h4 class="card-title mbr-fonts-style display-5"><strong>ВОЗНЕСЕНИЙ</strong></h4>
+					<p class="mbr-text card-text mbr-fonts-style mb-0 display-7">
+						в общей сумме сделали игроки MONSTER WAR. Впечатляющая<br>цифра!</p>
+				</div>
+			</div><div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+				<div class="item-wrapper">
+					<div class="title mb-3">
+						<h3 class="mbr-fonts-style display-1 whilebold" id="gold-count" style="color: white;">
+							0</h3>
+					</div>
+					<h4 class="card-title mbr-fonts-style display-5"><strong>ЗОЛОТА</strong></h4>
+					<p class="mbr-text card-text mbr-fonts-style mb-0 display-7">сейчас суммарно держат все игроки MONSTER WAR.</p>
+				</div>
+			</div><div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+				<div class="item-wrapper">
+					<div class="title mb-3">
+						<h3 class="mbr-fonts-style display-1 whilebold" id="overallatk-count" style="color: white;">
+							0</h3>
+					</div>
+					<h4 class="card-title mbr-fonts-style display-5"><strong>ЕД. УРОНА</strong></h4>
+					<p class="mbr-text card-text mbr-fonts-style mb-0 display-7">суммарно нанесут все игроки MONSTER WAR, если кликнут одновременно.</p>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</section>
+
+<section data-bs-version="5.1" class="article07 cid-uJc2eJXQU8 mbr-fullscreen" id="article07-5">
+  
+
+  
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="card col-md-12 col-lg-10">
+        <div class="card-wrapper">
+          <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2">
+            <em><strong>Что есть MONSTER WAR?</strong></em></h3>
+          <div class="row card-box align-left">
+            <div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5"><strong>Интересная смесь жанров</strong></h4>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  MONSTER WAR нельзя со стопроцентной точностью назвать только кликером или только ролевой игрой. Это игра, вобравшая в себя знаковые элементы обоих жанров, игра, в которой воплощены системы, идеи и образы, не виданные ранее ни в одной кликер-игре.
+                </p>
+              </div>
+            </div>
+            <div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5"><strong>Социальное взаимодействие</strong></h4>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  В игре имеется онлайновая составляющая: вы можете торговать с другими игроками, переписываться во внутриигровом чате, использовать промокоды и получать ещё множество бонусов — и весь ваш прогресс всегда сохранён в базе данных игры при условии, что вы используете онлайн-режим.
+                </p>
+              </div>
+            </div><div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5"><strong>Постоянные акции и раздачи от разработчика</strong></h4>
+                <p class="mbr-text mbr-fonts-style display-7">Благословение сервера, промокод недели, солидные компенсации за возникшие ошибки и неудобства, а также раздачи ресурсов для активных игроков.</p>
+              </div>
+            </div>
+            <div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5">
+                  <strong>Витиеватая механика экипировки</strong></h4>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  Вы можете покупать и создавать снаряжение, ношение которого обеспечит ваше игровое время дополнительной эффективностью: шансы выпадения ресурсов, повышение урона от критических ударов, уменьшение расхода выносливости, процентный бонус к базовым получаемым наградам, и так далее...
+                </p>
+              </div>
+            </div>
+            <div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5"><strong>Широкие возможности алхимии</strong></h4>
+                <p class="mbr-text mbr-fonts-style display-7">Вы можете создавать зелья в Алхимии из органов поверженных врагов: их использование даст вам положительные эффекты, но может и замедлить вашу прогрессию. Только вам решать, как и с чем комбинировать эти отвары.
+                </p>
+              </div>
+            </div><div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5"><strong>Ограниченные по времени события</strong></h4>
+                <p class="mbr-text mbr-fonts-style display-7"></p><p>В определённые дни недели сервер игры может ниспослать на вас своё благословение: увеличить получаемые награды, дать скидки на улучшения или даже удвоить получаемый опыт в игре.<br><br>Также в игре есть Теневой рынок —&nbsp; &nbsp; магазин, открывающийся два раза в неделю. В нём доступно высококлассное снаряжение, а также имеется возможность обмена особой валюты на полезные предметы и обычную валюту.</p><p></p>
+              </div>
+            </div><div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5">
+                  <strong>Бесконечная реиграбельность</strong></h4>
+                <p class="mbr-text mbr-fonts-style display-7">
+                  В MONSTER WAR вы можете прогрессировать бесконечно: тут всегда найдётся куда расти, что изучать и с кем конкурировать.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="footer4 cid-uJaRdLizMW" once="footers" id="footer04-1">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7"><strong>© BMBK Games, 2025.</strong></p>
+            </div>
+        </div>
+    </div>
+</section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/viewportchecker/viewportchecker.js"></script>  <script src="assets/theme/js/script.js"></script>  
+
+</body>
+</html>

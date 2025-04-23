@@ -1,7 +1,10 @@
 {
     "redirects": [
       { "source": "/ru", "destination": "/ru/" },
-      { "source": "/en", "destination": "/en/" }
+      { "source": "/ru/mw", "destination": "/ru/game/mw/" },
+      { "source": "/en", "destination": "/en/" },
+      { "source": "/en/mw", "destination": "/en/game/mw/" },
+      { "source": "/mw", "destination": "/ru/game/mw/" }
     ],
     "cleanUrls": true
 } 
