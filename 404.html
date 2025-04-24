@@ -50,11 +50,6 @@
   if(lang == "ru") document.getElementById("404text").innerHTML = "<br>Такой страницы&nbsp;</strong><strong>у нас нет...</strong><strong><br>";
   else if(lang == "en") document.getElementById("404text").innerHTML = "<br>Actually, we&nbsp;</strong><strong>don't have page&nbsp;you are lookin' for...</strong><strong><br>";
   setTimeout(() => {
-    const failureSfx = new Audio("./audio/failure.mp3");
-    failureSfx.autoplay = true;
-    failureSfx.play();
-  }, 50);
-  setTimeout(() => {
     new Audio("./audio/blinking.mp3").play();
     document.getElementById("404subtext").setAttribute('style', '');
     document.getElementById("404return").setAttribute('style', '');
