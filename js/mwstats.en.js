@@ -27,4 +27,3 @@ const client = new Ably.Realtime("cCwCqw.sBu_jQ:hAHwDUUdG_w0EAxyMY3TzRf6aQkIKDgT
         client.channels.get('site').subscribe('stats', async (d) => {
             SetStats(d);
         });
-        client.channels.get('site').publish('getstats', { });
