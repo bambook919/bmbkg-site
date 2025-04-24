@@ -1,11 +1,20 @@
 {
     "redirects": [
+      { "source": "/EN", "destination": "/en/" },
+      { "source": "/eN", "destination": "/en/" },
+      { "source": "/En", "destination": "/en/" },
+
+      { "source": "/RU", "destination": "/ru/" },
+      { "source": "/rU", "destination": "/ru/" },
+      { "source": "/Ru", "destination": "/ru/" },
+
       { "source": "/ru", "destination": "/ru/" },
       { "source": "/ru/mw", "destination": "/ru/game/mw/" },
       { "source": "/en", "destination": "/en/" },
       { "source": "/game/mw", "destination": "/ru/game/mw/" },
       { "source": "/en/mw", "destination": "/en/game/mw/" },
       { "source": "/mw", "destination": "/ru/game/mw/" },
+      { "source": "/mw/", "destination": "/ru/game/mw/" },
       { "source": "/js", "destination": "/en" }
     ],
     "cleanUrls": true
