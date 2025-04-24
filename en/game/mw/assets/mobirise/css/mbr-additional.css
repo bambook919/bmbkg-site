@@ -1226,6 +1226,66 @@ a {
 .cid-uJc1Hrp4Kc .card-box DIV {
   text-align: center;
 }
+.cid-uJhfkBYNkn {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-image: url("../../../assets/images/tavern.jpg-1279x800.jpg");
+}
+.cid-uJhfkBYNkn .mbr-overlay {
+  background: #000000;
+  opacity: 0.8;
+}
+.cid-uJhfkBYNkn .item-subtitle {
+  line-height: 1.2;
+  color: #edefeb;
+  text-align: center;
+}
+.cid-uJhfkBYNkn img,
+.cid-uJhfkBYNkn .item-img {
+  width: 100%;
+  height: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.cid-uJhfkBYNkn .item:focus,
+.cid-uJhfkBYNkn span:focus {
+  outline: none;
+}
+.cid-uJhfkBYNkn .item {
+  margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .cid-uJhfkBYNkn .item {
+    margin-bottom: 1rem;
+  }
+}
+.cid-uJhfkBYNkn .item-wrapper {
+  position: relative;
+  border-radius: 4px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.cid-uJhfkBYNkn .mbr-section-btn {
+  margin-top: auto !important;
+}
+.cid-uJhfkBYNkn .mbr-section-title {
+  color: #f1efe3;
+}
+.cid-uJhfkBYNkn .mbr-text,
+.cid-uJhfkBYNkn .mbr-section-btn {
+  color: #a6a99c;
+  text-align: center;
+}
+.cid-uJhfkBYNkn .item-title {
+  color: #f7f7f7;
+  text-align: center;
+}
+.cid-uJhfkBYNkn .content-head {
+  max-width: 800px;
+}
+.cid-uJhfkBYNkn .mbr-section-subtitle {
+  color: #e6e2d0;
+}
 .cid-uJc2eJXQU8 {
   background-color: #0f0f0f;
 }
