@@ -9,44 +9,8 @@
   <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
   <meta name="description" content="">
   <script src="https://cdn.ably.com/lib/ably.min-2.js"></script>
+  <script src="../../../js/mwstats.ru.js"></script>
   <script>
-    const utils = {
-        rn: (count) => {
-            count = Math.floor(count);
-            let i = 0 === count ? count : Math.floor(Math.log(count) / Math.log(1000)); 
-            let result = parseFloat((count / Math.pow(1000, i)).toFixed(2)); 
-            if (i > 25) return "Много";
-                 result += "" + ["", "K", "KK", "KKK", "KKKK", "KKKKK", "KKKKKK", "KKKKKKK", "KKKKKKKK", "KKKKKKKKK", "KKKKKKKKKK", "KKKKKKKKKKK", "KKKKKKKKKKKK", "KKKKKKKKKKKKK", "KKKKKKKKKKKKKK", "KKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKKKKKK", "KKKKKKKKKKKKKKKKKKKKKK"][i];
-            return result;
-        },
-        decl: (n, titles) => { return titles[(n % 10 === 1 && n % 100 !== 11) ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 1 : 2] },
-    }
-    function SetStats() {
-      const xhr1 = new XMLHttpRequest();
-      xhr1.open('GET', 'https://bmbkg.ru/api/mwstats', true);
-      xhr1.responseType = 'json';
-      const data = {
-            data: undefined
-      }
-      xhr1.onload = function() {
-        if (xhr1.status == 200) {
-          document.getElementById('serverstatus').innerText = "Статус сервера: работает в штатном режиме...";
-          data.data = (xhr1.response);
-          if(data.data.players && Number.isNaN(data.data.players) == false) document.getElementById('players-count').innerText = (+data.data.players || 0).toLocaleString('ru');
-          if(data.data.playtime && Number.isNaN(data.data.playtime) == false) document.getElementById('playtime-count').innerText = (+data.data.playtime || 0).toLocaleString('ru');
-          if(data.data.kills && Number.isNaN(data.data.kills) == false) document.getElementById('kills-count').innerText = (+data.data.kills || 0).toLocaleString('ru');
-          if(data.data.ascension && Number.isNaN(data.data.ascension) == false) document.getElementById('ascension-count').innerText = (+data.data.ascension || 0).toLocaleString('ru');
-          if(data.data.gold && Number.isNaN(data.data.gold) == false) document.getElementById('gold-count').innerText = utils.rn(+data.data.gold || 0);
-          if(data.data.overallAtk && Number.isNaN(data.data.overallAtk) == false) document.getElementById('overallatk-count').innerText = utils.rn(+data.data.overallAtk || 0);
-        }
-        else if(xhr1.status != 200) document.getElementById('serverstatus').innerHTML = "Статус сервера: наблюдаются проблемы с подключением..." + ("(HTTP "  + xhr1.status.toString() + ")");;
-      };
-      xhr1.send();
-    }
-    SetStats();
-    setInterval(() => {
-      SetStats();
-    }, 3000);
     
   </script>
   <script>
