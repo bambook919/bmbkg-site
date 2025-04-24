@@ -2,7 +2,7 @@ const clientPromise = require('@lib/mongodb');
 
 export async function GET(request) {
     const client = await clientPromise();
-    const col = client.db('general').collection('players');
+    const col = client.connect('mongodb+srv://junytwork:ADMIN1@mnstr.wiubncu.mongodb.net/general?retryWrites=true&w=majority&appName=MNSTR');
     /*await fetch("http://91.245.227.195:1518/mwstats").then(async res => {
         return new Response.json(await res.json());
     }).catch(() => { return new Response.json({ success: false }) });*/
