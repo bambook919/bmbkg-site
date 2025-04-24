@@ -3,7 +3,7 @@
       { "source": "/ru", "destination": "/ru/" },
       { "source": "/ru/mw", "destination": "/ru/game/mw/" },
       { "source": "/en", "destination": "/en/" },
-      { "source": "/game/mw", "destination": "/en/game/mw/" },
+      { "source": "/game/mw", "destination": "/ru/game/mw/" },
       { "source": "/en/mw", "destination": "/en/game/mw/" },
       { "source": "/mw", "destination": "/ru/game/mw/" },
       { "source": "/js", "destination": "/en" }
