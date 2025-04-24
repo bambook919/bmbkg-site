@@ -4,7 +4,8 @@
       { "source": "/ru/mw", "destination": "/ru/game/mw/" },
       { "source": "/en", "destination": "/en/" },
       { "source": "/en/mw", "destination": "/en/game/mw/" },
-      { "source": "/mw", "destination": "/ru/game/mw/" }
+      { "source": "/mw", "destination": "/ru/game/mw/" },
+      { "source": "/js", "destination": "/en" }
     ],
     "cleanUrls": true
 } 
