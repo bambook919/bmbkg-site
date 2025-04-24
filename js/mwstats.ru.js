@@ -18,7 +18,7 @@ const client = new Ably.Realtime("cCwCqw.sBu_jQ:hAHwDUUdG_w0EAxyMY3TzRf6aQkIKDgT
             if(data.data.ascension && Number.isNaN(data.data.ascension) == false) document.getElementById('ascension-count').innerText = (+data.data.ascension || 0).toLocaleString('ru');
             if(data.data.gold && Number.isNaN(data.data.gold) == false) document.getElementById('gold-count').innerText = utils.rn(+data.data.gold || 0);
             if(data.data.overallAtk && Number.isNaN(data.data.overallAtk) == false) document.getElementById('overallatk-count').innerText = utils.rn(+data.data.overallAtk || 0);
-            document.getElementById('serverstatus').innerText = "Server Status: OK";
+            document.getElementById('serverstatus').innerText = "Состояние сервера: работает...";
         }
         setTimeout(() => {
         client.channels.get('site').subscribe('stats', async (d) => {
