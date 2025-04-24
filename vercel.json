@@ -8,6 +8,10 @@
       { "source": "/rU", "destination": "/ru/" },
       { "source": "/Ru", "destination": "/ru/" },
 
+      { "source": "/MW", "destination": "/ru/game/mw/" },
+      { "source": "/Mw", "destination": "/ru/game/mw/" },
+      { "source": "/mW", "destination": "/ru/game/mw/" },
+
       { "source": "/ru", "destination": "/ru/" },
       { "source": "/ru/mw", "destination": "/ru/game/mw/" },
       { "source": "/en", "destination": "/en/" },
