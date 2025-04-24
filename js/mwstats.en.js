@@ -24,9 +24,7 @@ const client = new Ably.Realtime("cCwCqw.sBu_jQ:hAHwDUUdG_w0EAxyMY3TzRf6aQkIKDgT
             });
             document.getElementById('serverstatus').innerText = "Server Status: OK";
         }
-        setTimeout(() => {
         client.channels.get('site').subscribe('stats', async (d) => {
             SetStats(d);
         });
         client.channels.get('site').publish('getstats', { });
-        }, 5);
