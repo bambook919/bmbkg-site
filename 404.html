@@ -44,10 +44,12 @@
   </div>
 </section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/theme/js/script.js"></script>  
 <script>
-  new Audio("./audio/failure.mp3").play();
   const lang = navigator.language || "en";
   if(lang == "ru") document.getElementById("404text").innerHTML = "<br>Такой страницы&nbsp;</strong><strong>у нас нет...</strong><strong><br>";
   else if(lang == "en") document.getElementById("404text").innerHTML = "<br>Actually, we&nbsp;</strong><strong>don't have page&nbsp;you are lookin' for...</strong><strong><br>";
+  setTimeout(() => {
+    new Audio("./audio/failure.mp3").play();
+  }, 50);
   setTimeout(() => {
     new Audio("./audio/blinking.mp3").play();
     document.getElementById("404subtext").setAttribute('style', '');
