@@ -1,5 +1,5 @@
 let statsData = {};
-const client = new Ably.Realtime("cCwCqw.sBu_jQ:hAHwDUUdG_w0EAxyMY3TzRf6aQkIKDgTcQlAOav81ME");
+const client = new Ably.Realtime("sC3d0A.ISleKA:0QBJMaHM__RbgcX0dMApH-07R_zofwWPgS7idD87QrU");
 const utils = {
     rn: (count) => {
         count = Math.floor(count);
