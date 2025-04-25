@@ -1,6 +1,4 @@
 {
-    "version": "2",
-
     "icons": [
        { "src": "/assets/logo5.png", "type": "image/png", "sizes": "192x192" },
        { "src": "/assets/logo5.png", "type": "image/png", "sizes": "512x512" }
