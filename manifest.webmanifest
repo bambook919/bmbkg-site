@@ -1,7 +1,7 @@
 {
     "icons": [
-       { "src": "/assets/logo5.png", "type": "image/png", "sizes": "192x192" },
-       { "src": "/assets/logo5.png", "type": "image/png", "sizes": "512x512" }
+       { "src": "/assets/tableau.png", "type": "image/png", "sizes": "192x192" },
+       { "src": "/assets/tableau.png", "type": "image/png", "sizes": "512x512" }
     ],
     "layout": {
         "logo": "https://bmbkg.ru/tableau.png",
