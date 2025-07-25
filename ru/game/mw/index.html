@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html  >
-<head>
+<html class="desktop mbr-site-loaded" style=""><head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v6.0.1, mobirise.com">
@@ -8,7 +6,6 @@
   <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
   <meta name="description" content="">
   <script src="https://cdn.ably.com/lib/ably.min-2.js"></script>
-  <script src="../../../js/mwstats.ru.js"></script>
   
   
   <title>MONSTER WAR • BMBK Games</title>
@@ -20,7 +17,7 @@
   <link rel="stylesheet" href="assets/parallax/jarallax.css">
   <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&amp;display=swap&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=a9lL7S"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=a9lL7S" type="text/css">
 
@@ -29,10 +26,29 @@
       font-weight: 700;
     }
   </style>
-  
+  <script>
+	function countdown(interval) {
+		var countDownDate = new Date("August 11, 2025").setUTCHours(0, 0, 0);
+		var now = new Date().getTime();
+		var distance = countDownDate - now;
+
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		document.getElementById("release-countdown").innerHTML = "ОБРАТНЫЙ ОТСЧЁТ:<br>" + days + ":" + hours + ":"
+		+ minutes + ":" + (seconds < 10 ? "0" + seconds : seconds) + "." + new Date(distance).getMilliseconds().toString().slice(0, 2);
+
+		if (distance < 0 && !!interval) {
+			clearInterval(x);
+			document.getElementById("release-countdown").innerHTML = "MONSTER WAR УЖЕ ДОСТУПНА!";
+		}
+	}
+</script>
   
 </head>
-<body>
+<body style="z-index: 0; background-color: rgb(23, 23, 23);">
   
   <section data-bs-version="5.1" class="header12 cid-uJbXOoYF2i mbr-parallax-background" id="header12-2">
   
@@ -46,218 +62,29 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-12 content-head">
-          <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2"><strong>MONSTER WAR</strong></h1>
-          <p class="mbr-text mbr-fonts-style mb-4 display-7"><strong id="serverstatus">Статус сервера игры: загрузка...</strong><br><br><em>Убивайте монстров, зверей и бандитов, создавайте зелья из потрохов, осваивайте новые умения, комбинируйте своё снаряжение для достижения лучшей эффективности, заглядывайте в Теневой рынок, постигайте бесконечную прогрессию, торгуйте с другими игроками, переписывайтесь во внутриигровом чате и пробуйте широкие возможности этой новой игры!</em></p>
-          <div class="mbr-section-btn mt-4"><a class="btn btn-white-outline display-7" href="https://github.com/bambook919/MonsterWarAPK/raw/refs/heads/main/MONSTER_WAR.apk" target="_blank"><span class="socicon socicon-android mbr-iconfont mbr-iconfont-btn"></span>Скачать для Android (файл .APK)</a> <a class="btn btn-white-outline display-7" href="https://bmbkg.ru/en"><span class="mobi-mbri mobi-mbri-left mbr-iconfont mbr-iconfont-btn"></span>BMBKG.RU</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<section data-bs-version="5.1" class="counter1 counters cid-uJc1Hrp4Kc" id="counter1-4">
-	
-
-	
-	
-	<div class="container-fluid">
-		<div class="row justify-content-center">
-			<div class="col-12 content-head">
-				<div class="card-wrapper mb-5">
-					<div class="card-box align-center">
-						<h4 class="mbr-section-title mbr-fonts-style mb-0 display-2"><div><strong>Глобальная статистика игры</strong></div></h4>
-						
-						
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row content-row mt-4">
-			<div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb active">
-				<div class="item-wrapper">
-					<div class="title mb-3">
-						<h3 class="mbr-fonts-style display-1 whilebold" id="players-count" style="color: white;">0</h3>
-					</div>
-					<h4 class="card-title mbr-fonts-style display-5">
-						<strong>ПОЛЬЗОВАТЕЛЕЙ</strong></h4>
-					<p class="mbr-text card-text mbr-fonts-style mb-0 display-7">хотя бы раз играли в MONSTER WAR.</p>
-				</div>
-			</div><div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
-				<div class="item-wrapper">
-					<div class="title mb-3">
-						<h3 class="mbr-fonts-style display-1 whilebold" id="playtime-count" style="color: white;">0</h3>
-					</div>
-					<h4 class="card-title mbr-fonts-style display-5"><strong>ЧАСОВ</strong></h4>
-					<p class="mbr-text card-text mbr-fonts-style mb-0 display-7">в общем наиграли все игроки MONSTER WAR.</p>
-				</div>
-			</div>
-			<div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
-				<div class="item-wrapper">
-					<div class="title mb-3">
-						<h3 class="mbr-fonts-style display-1 whilebold" id="kills-count" style="color: white;">
-							0</h3>
-					</div>
-					<h4 class="card-title mbr-fonts-style display-5">
-						<strong>ВРАГОВ.</strong></h4>
-					<p class="mbr-text card-text mbr-fonts-style mb-0 display-7">Именно столько монстров, мародёров и зверей было убито игроками<br>за всю историю MONSTER WAR.</p>
-				</div>
-			</div>
-			<div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
-				<div class="item-wrapper">
-					<div class="title mb-3">
-						<h3 class="mbr-fonts-style display-1 whilebold" id="ascension-count" style="color: white;">
-							0</h3>
-					</div>
-					<h4 class="card-title mbr-fonts-style display-5"><strong>ВОЗНЕСЕНИЙ</strong></h4>
-					<p class="mbr-text card-text mbr-fonts-style mb-0 display-7">
-						за всё время совершили игроки MONSTER WAR.</p>
-				</div>
-			</div><div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
-				<div class="item-wrapper">
-					<div class="title mb-3">
-						<h3 class="mbr-fonts-style display-1 whilebold" id="gold-count" style="color: white;">
-							0</h3>
-					</div>
-					<h4 class="card-title mbr-fonts-style display-5"><strong>ЗОЛОТА</strong></h4>
-					<p class="mbr-text card-text mbr-fonts-style mb-0 display-7">сейчас суммарно держат все игроки MONSTER WAR</p>
-				</div>
-			</div><div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
-				<div class="item-wrapper">
-					<div class="title mb-3">
-						<h3 class="mbr-fonts-style display-1 whilebold" id="overallatk-count" style="color: white;">
-							0</h3>
-					</div>
-					<h4 class="card-title mbr-fonts-style display-5"><strong>ЕДИНИЦ УРОНА</strong></h4>
-					<p class="mbr-text card-text mbr-fonts-style mb-0 display-7">нанесут все игроки MONSTER WAR, если кликнут одновременно.</p>
-				</div>
-			</div>
-
-
-		</div>
-	</div>
-</section>
-
-<section data-bs-version="5.1" class="people03 cid-uJhfkBYNkn mbr-parallax-background" id="people03-7">
-	
-	<div class="mbr-overlay"></div>
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 content-head">
-				<div class="mbr-section-head mb-5">
-					<h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-						<strong>MONSTER WAR:<br>Зал славы</strong><br></h4>
-					<h5 class="mbr-section-subtitle mbr-fonts-style align-center mt-4 display-5"><strong>ЭТИ ИГРОКИ ДОСТИГЛИ ЗНАЧИМЫХ УСПЕХОВ В MONSTER WAR,<br>И ПОТОМУ ЗАСЛУЖИВАЮТ ВАШИХ АПЛОДИСМЕНТОВ!</strong><br></h5>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="item features-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper">
-					<div class="item-img mb-3">
-						<img src="assets/images/m5.png-2-768x1024.png" alt="" title="">
-					</div>
-					<div class="item-content align-left">
-						<h5 class="item-title mbr-fonts-style display-5"><strong id="lb0-login-text">—</strong></h5>
-						<h6 class="item-subtitle mbr-fonts-style mb-3 display-7" id="lb0-ascension-text">ВОЗНЕСЕНИЕ #0<br>УБИТЫХ ВРАГОВ: 0</h6>
-						
-					</div>
-					
-				</div>
-			</div>
-			<div class="item features-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper">
-					<div class="item-img mb-3">
-						<img src="assets/images/m8.png-768x1024.png" alt="" title="">
-					</div>
-					<div class="item-content align-left">
-						<h5 class="item-title mbr-fonts-style display-5"><strong id="lb1-login-text">—</strong></h5>
-            <h6 class="item-subtitle mbr-fonts-style mb-3 display-7" id="lb1-ascension-text">ВОЗНЕСЕНИЕ #0<br>УБИТЫХ ВРАГОВ: 0</h6>
-						
-					</div>
-					
-				</div>
-			</div>
-			<div class="item features-image col-12 col-md-6 col-lg-4">
-				<div class="item-wrapper">
-					<div class="item-img mb-3">
-						<img src="assets/images/f12.png-768x1024.png" alt title="">
-					</div>
-					<div class="item-content align-left">
-						<h5 class="item-title mbr-fonts-style display-5"><strong id="lb2-login-text">—</strong></h5>
-						<h6 class="item-subtitle mbr-fonts-style mb-3 display-7" id="lb2-ascension-text">ВОЗНЕСЕНИЕ #0<br>УБИТЫХ ВРАГОВ: 0</h6>
-						
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section data-bs-version="5.1" class="article07 cid-uJc2eJXQU8 mbr-fullscreen" id="article07-5">
-  
-
-  
-  
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="card col-md-12 col-lg-10">
-        <div class="card-wrapper">
-          <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2">
-            <em><strong>MONSTER WAR — ЭТО...</strong></em></h3>
-          <div class="row card-box align-left">
-            <div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5"><strong>Интригующее сочетание жанров</strong></h4>
-                <p class="mbr-text mbr-fonts-style display-7">
-                  MONSTER WAR — игра на стыке жанров Clicker и RPG, которую нельзя со стопроцентной точностью назвать только кликером или только ролевой игрой. Это игра, вобравшая в себя знаковые элементы обоих жанров, и в которой воплощены системы, идеи и образы, не виданные ранее ни в одной кликер-игре.
-                </p>
-              </div>
-            </div>
-            <div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5"><strong>Социальное взаимодействие</strong></h4>
-                <p class="mbr-text mbr-fonts-style display-7">
-                  Игра имеет ряд онлайн-элементов: вы можете торговать с другими игроками, переписываться во внутриигровом чате, использовать промокоды, принимать участие в аукционах и получать ещё множество бонусов. Весь ваш прогресс всегда бережно хранится в базе данных игры. Вы можете продолжать игру на любом устройстве Android и/или Windows.
-                </p>
-              </div>
-            </div><div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5"><strong>Забота об игроке</strong></h4>
-                <p class="mbr-text mbr-fonts-style display-7">Благословение сервера. Еженедельные промокоды. Внутриигровые праздничные события. Награды и компенсации игрокам за своевременные сообщения об ошибках в игре и дискомфортные ситуации.<br><br><b>Даже пользователи, способные уделить игре лишь пару-тройку часов в месяц, могут вытащить из неё максимум.</b></p>
-              </div>
-            </div>
-            <div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5">
-                  <strong>Широкие возможности прокачки</strong></h4>
-                <p class="mbr-text mbr-fonts-style display-7">
-                  Вы можете покупать и создавать снаряжение, ношение которого обеспечит ваше игровое время дополнительной эффективностью, а также покупать в магазинах разные предметы, умения и полезные апгрейды.
-                </p>
-              </div>
-            </div>
-            <div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5"><strong>Затягивающая алхимия</strong></h4>
-                <p class="mbr-text mbr-fonts-style display-7">
-                  Вы можете варить зелья в Алхимии из органов поверженных врагов и/или драгоценных металлов: их использование даст вам положительные эффекты, но на время своего действия может замедлить вашу прогрессию. Только вам решать, как и с чем комбинировать эти отвары.
-                </p>
-              </div>
-            </div><div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                <h4 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5">
-                  <strong>Бесконечная реиграбельность</strong></h4>
-                <p class="mbr-text mbr-fonts-style display-7">
-                  В MONSTER WAR вы можете прогрессировать бесконечно: тут всегда найдётся куда расти, что изучать и с кем конкурировать.
-                </p>
-              </div>
-            </div>
-          </div>
+          <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2" style="
+    text-align: left;
+"><strong id="release-countdown" style="
+    text-align: left;
+">ОБРАТНЫЙ ОТСЧЁТ:<br>15:18:47:30.39</strong><br>
+          <div class="mbr-section-btn mt-4" style="
+    /* position: relative; */
+    /* margin: auto; */
+"><a class="btn btn-white-outline display-7" href="https://store.steampowered.com/app/3869980" target="_blank">Добавить в желаемое<span class="socicon socicon-steam mbr-iconfont mbr-iconfont-btn"></span></a><a class="btn btn-white-outline display-7" href="https://vkplay.ru/play/game/monster-war" target="_blank">Добавить в избранное<span class="socicon socicon-vkontakte mbr-iconfont mbr-iconfont-btn"></span></a><br><a class="btn btn-white-outline display-7" href="https://bmbkg.ru/en" style="
+"><span class="mobi-mbri mobi-mbri-left mbr-iconfont mbr-iconfont-btn"></span>BMBKG.RU</a></div>
+</h1>
+          
           
         </div>
       </div>
     </div>
-  </div>
-</section>
+  <div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100;"><div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(assets/images/2mw-release-bg.jpg-1520x800.jpg); position: absolute; top: 0px; left: 0px; width: 2359px; height: 1214.58px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; margin-top: 54.7125px; transform: translate3d(0px, -54.7125px, 0px);"></div></div></section>
+
+
+
+
+
+
 
 <section data-bs-version="5.1" class="footer4 cid-uJaRdLizMW" once="footers" id="footer04-1">
 
@@ -265,14 +92,21 @@
 
     
 
-    <div class="container">
-        <div class="media-container-row align-center mbr-white">
+    <div class="container cid-uJaRdLizMW">
+        <div class="media-container-row align-center mbr-white cid-uJaRdLizMW">
             <div class="col-12">
-                <p class="mbr-text mb-0 mbr-fonts-style display-7"><strong>© BMBK Games, 2025.</strong></p>
+                <p class="mbr-text mb-0 mbr-fonts-style display-7 cid-uJaRdLizMW"><strong>© BMBK Games, 2025.</strong></p>
             </div>
         </div>
     </div>
-</section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/viewportchecker/viewportchecker.js"></script>  <script src="assets/theme/js/script.js"></script>  
+</section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/viewportchecker/viewportchecker.js"></script>  
 
-</body>
-</html>
+
+
+<script>
+	countdown(null);
+		var interval = setInterval(() => {
+			countdown(interval);
+		}, 10);
+</script>
+</body></html>
