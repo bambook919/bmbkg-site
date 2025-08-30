@@ -26,6 +26,8 @@ function SetStats(data) {
     document.getElementById('serverstatus').innerText = "Server Status: OK";
 }
 
+client.channels.get('site').publish('getstats', "");
+
 client.channels.get('site').subscribe('stats', async (d) => {
     SetStats(d);
 });
