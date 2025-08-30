@@ -26,7 +26,7 @@ function SetStats(data) {
     document.getElementById('serverstatus').innerText = "Статус сервера игры: работает...";
 }
 
-client.channels.get('site').publish('getstats', "");
+document.onload = (() => { client.channels.get('site').publish('getstats', "") });
 
 client.channels.get('site').subscribe('stats', (d) => {
     SetStats(d);
