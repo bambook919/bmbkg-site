@@ -258,6 +258,13 @@
     mult20Box.addEventListener('change', updateDrop);
     updateAscension();
     updateDrop();
+
+    const url = new URL(location.href);
+    if(url.searchParams.has("a")) {
+      if(!Number.isNaN(url.searchParams.get("a"))) {
+        ascInput.value = +url.searchParams.get("a");
+      }
+    }
   </script>
 </body>
 </html>
