@@ -263,6 +263,7 @@
     if(url.searchParams.has("a")) {
       if(!Number.isNaN(url.searchParams.get("a"))) {
         ascInput.value = +url.searchParams.get("a");
+        updateAscension();
       }
     }
   </script>
