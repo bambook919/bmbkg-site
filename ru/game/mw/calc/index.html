@@ -266,6 +266,10 @@
         updateAscension();
       }
     }
+    if(url.searchParams.has("vip")) {
+      vipCheckbox.checked = (url.searchParams.get("vip") == "y");
+      updateAscension();
+    }
   </script>
 </body>
 </html>
